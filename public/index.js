@@ -7,6 +7,7 @@ ws.onopen = () => {
 ws.onmessage = event => {
   const msgObj = JSON.parse(event.data);
   console.log('Message received from server:', msgObj);
+  showMessage(msgObj);
 };
 
 ws.onerror = error => {
@@ -23,4 +24,8 @@ function sendMessage(username, text) {
     text: text,
   };
   ws.send(JSON.stringify(message));
+}
+
+function showMessage(msgObj) {
+  // TODO mostrar el mensaje en la página
 }
