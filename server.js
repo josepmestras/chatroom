@@ -34,6 +34,7 @@ const server = Bun.serve({
   websocket: {
     message(ws, message) {
       try {
+        console.log('Got message: ' + message);
         const data = JSON.parse(message);
 
         if (data.username && data.text) {
@@ -43,7 +44,8 @@ const server = Bun.serve({
             timestamp: new Date().toISOString(),
           });
 
-          ws.publish('chatroom', messageToSend);
+          ws.publish('chatroom', messageToSend); // Send message to all other subscribers
+          ws.send(messageToSend); // Send message back to originator web socket
         }
       } catch (err) {
         console.error('Error parsing message:', err);
