@@ -22,8 +22,8 @@ ws.onclose = event => {
 
 function sendMessage(username, text) {
   const message = {
-    username: username,
-    text: text,
+    username,
+    text,
   };
   ws.send(JSON.stringify(message));
 }
