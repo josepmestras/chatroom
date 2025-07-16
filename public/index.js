@@ -45,7 +45,10 @@ function showMessage(msgObj) {
   const article = document.createElement('article');
   mensajes.appendChild(article);
   article.innerHTML = `
-    <div class="username">${msgObj.username}</div>
+    <div class="username">
+      ${msgObj.username}
+      <span class="timestamp">(${msgObj.timestamp})</span>
+    </div>
     <div class="message">${msgObj.text}</div>
   `;
 }

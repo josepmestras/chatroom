@@ -27,3 +27,8 @@ article {
 .username {
   font-weight: bold;
 }
+
+.timestamp {
+  color: gray;
+  font-weight: normal;
+}
