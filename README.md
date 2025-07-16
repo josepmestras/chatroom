@@ -14,3 +14,4 @@ Este es u chat que utiliza Web Sockets
 - [ ] Mensajes propios alineados a la derecha
 - [ ] Mensajes en globos
 - [ ] Anchura justa para cada mensaje
+- [ ] Añadir scrollbar en la caja de mensajes
