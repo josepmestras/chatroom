@@ -28,18 +28,24 @@ function sendMessage(username, text) {
   ws.send(JSON.stringify(message));
 }
 
-function showMessage(msgObj) {
-  // TODO mostrar el mensaje en la página
-}
-
 //#region Código de UI
 
 const nombre = document.getElementById('nombre');
 const mensaje = document.getElementById('mensaje');
 const enviar = document.getElementById('enviar');
+const mensajes = document.getElementById('mensajes');
 
 enviar.onclick = () => {
   const username = nombre.value;
   const text = mensaje.value;
   sendMessage(username, text);
 };
+
+function showMessage(msgObj) {
+  const article = document.createElement('article');
+  mensajes.appendChild(article);
+  article.innerHTML = `
+    <div class="username">${msgObj.username}</div>
+    <div class="message">${msgObj.text}</div>
+  `;
+}
