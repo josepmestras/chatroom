@@ -4,14 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chat Room</title>
-    <style>
-      body {
-        font-family: sans-serif;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>Web socket test</h1>
+
+    <form>
+      <label
+        >Nombre:
+        <input type="text" id="nombre" />
+      </label>
+      <label
+        >Mensaje:
+        <textarea id="mensaje"></textarea>
+      </label>
+      <button id="enviar">Enviar</button>
+    </form>
+
+    <h2>Mensajes</h2>
+    <section id="mensajes">hola</section>
+
     <script src="index.js"></script>
   </body>
 </html>

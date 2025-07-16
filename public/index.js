@@ -1,5 +1,7 @@
 const ws = new WebSocket('/chatroom');
 
+//#region Código de Mensajes
+
 ws.onopen = () => {
   console.log('Connected to the WebSocket server.');
 };
@@ -29,3 +31,15 @@ function sendMessage(username, text) {
 function showMessage(msgObj) {
   // TODO mostrar el mensaje en la página
 }
+
+//#region Código de UI
+
+const nombre = document.getElementById('nombre');
+const mensaje = document.getElementById('mensaje');
+const enviar = document.getElementById('enviar');
+
+enviar.onclick = () => {
+  const username = nombre.value;
+  const text = mensaje.value;
+  sendMessage(username, text);
+};
