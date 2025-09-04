@@ -1,6 +1,6 @@
 # Chat
 
-Este es u chat que utiliza Web Sockets
+Este es un chat que utiliza Web Sockets
 
 ## Cómo usar
 
