@@ -47,13 +47,13 @@ function showMessage(msgObj) {
   article.innerHTML = `
     <div class="username">
       ${msgObj.username}
-      <span class="time">(${fechaBonita(msgObj.timestamp)})</span>
+      <span class="time">(${formatearFecha(msgObj.timestamp)})</span>
     </div>
     <div class="message">${msgObj.text}</div>
   `;
 }
 
-function fechaBonita(fechaISO) {
+function formatearFecha(fechaISO) {
   const fecha = new Date(fechaISO);
   const hora = fecha.getHours();
   const minuto = fecha.getMinutes();
